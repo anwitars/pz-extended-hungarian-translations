@@ -75,7 +75,8 @@ done
 if $VERBOSE; then
   echo "Copying mod.info..."
 fi
-cp mod.info "$FINAL_DIR"
+mkdir -p "$FINAL_DIR/42"
+cp mod.info "$FINAL_DIR/42"
 
 if $VERBOSE; then
   echo "Creating archive..."
