@@ -1,0 +1,42 @@
+name: Build Mod
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Project Zomboid Mod
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+      - name: Get version
+        id: version
+        run: |
+          VERSION=$(./version.sh)
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Building version: $VERSION"
+
+      - name: Build mod
+        run: |
+          ./build.sh "extended-hungarian-translations-${{ steps.version.outputs.version }}.tar.gz"
+
+      - name: Upload mod artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: extended-hungarian-translations-${{ steps.version.outputs.version }}
+          path: extended-hungarian-translations-${{ steps.version.outputs.version }}.tar.gz
+          if-no-files-found: error
+          retention-days: 14
