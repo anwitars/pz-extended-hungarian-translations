@@ -18,7 +18,7 @@ SHORT_HASH=$(git rev-parse --short HEAD)
 if [[ "$COMMITS_AHEAD" -eq 0 ]]; then
     MOD_VERSION="$VERSION"
 else
-    MOD_VERSION="${VERSION}+${COMMITS_AHEAD}.${SHORT_HASH}"
+    MOD_VERSION="${VERSION}.dev${COMMITS_AHEAD}+${SHORT_HASH}"
 fi
 
 printf '%s\n' "$MOD_VERSION"
