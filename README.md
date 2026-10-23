@@ -1,4 +1,4 @@
-# Kibővített magyar fordítások
+# Kibővített Magyar Fordítások
 
 <img src="preview.png" alt="Kibővített magyar fordítások logója" width="360">
 
@@ -12,8 +12,8 @@ A projekt célja, hogy a **Project Zomboidhoz** készült népszerű modokhoz ma
 
 Az állapotok jelentése:
 
-- **Folyamatban:** a fordítás készül vagy ellenőrzés alatt áll.
-- **Kész:** a fordítás aktuális terjedelme elkészült és használható.
+- **Folyamatban:** a fordítás folyamatban van.
+- **Kész:** a fordítási mod tartalmazza az adott mod magyarítását, amennyiben a mod telepítve van.
 - **Hivatalos fordítás:** a projekt által készített/módosított fordítás bekerült az adott mod hivatalos kiadásába.
 
 ## Letöltés
@@ -22,15 +22,18 @@ A Kibővített magyar fordítások legfrissebb kiadását a [Kiadások oldalon](
 
 ## Telepítés
 
-1. Csomagold ki az archívumot a Project Zomboid `Zomboid\mods` könyvtárába (Windows alatt általában `%UserProfile%\Zomboid\mods`). A kicsomagolás után a mod fájlja például itt legyen: `Zomboid\mods\ExtendedHungarianTranslations\42\mod.info`.
-2. Indítsd el a játékot, és a **Modok** menüben engedélyezd a **Kibővített magyar fordítások** modot. Ha más modokat is használsz, ezt a fordításmodot tedd a betöltési sorrend végére.
-3. A játék nyelvi beállításainál válaszd a beépített magyar nyelvet.
+Csomagold ki az archívumot a Project Zomboid `Zomboid\mods` könyvtárába (Windows alatt általában `%UserProfile%\Zomboid\mods`). A kicsomagolás után a mod fájlja például itt legyen: `Zomboid\mods\ExtendedHungarianTranslations\42\mod.info`.
 
 Az archívum az összes felsorolt fordítást tartalmazza; nem kell külön kiválasztanod vagy telepítened őket. Amikor telepítesz és engedélyezel egy támogatott modot, annak magyar fordítása automatikusan elérhető lesz. Magukat a támogatott modokat külön kell telepítened és engedélyezned.
 
 ### Frissítés
 
 Új verzió telepítésekor először töröld a meglévő `Zomboid\mods\ExtendedHungarianTranslations` mappát, majd csomagold ki az új kiadás archívumát. A teljes újratelepítés megelőzi, hogy a korábbi verzióból visszamaradt fájlok ütközzenek az újakkal.
+
+## Használat
+
+1. Indítsd el a játékot, és a **Modok** menüben engedélyezd a **Kibővített magyar fordítások** modot. Ha más modokat is használsz, ezt a fordításmodot tedd a betöltési sorrend végére.
+2. A játék nyelvi beállításainál válaszd a beépített magyar nyelvet.
 
 ## Közreműködés
 
