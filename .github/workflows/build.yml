@@ -92,4 +92,5 @@ jobs:
         run: |
           gh release create "${GITHUB_REF_NAME}" "$ARCHIVE" \
             --title "${GITHUB_REF_NAME}" \
-            --notes-file release-notes.md
+            --notes-file release-notes.md \
+            --draft
