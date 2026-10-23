@@ -1,5 +1,7 @@
 # Kibővített magyar fordítások
 
+<img src="preview.png" alt="Kibővített magyar fordítások logója" width="360">
+
 A projekt célja, hogy a **Project Zomboidhoz** készült népszerű modokhoz magyar fordításokat készítsen és tartson karban. A gyűjtemény az alapjáték beépített magyar nyelvéhez is hozzájárul: javításokat és hiányzó magyar szövegeket tartalmazhat. A mod jelenleg kizárólag a **42-es builddel** használható.
 
 ## Fordítások állapota
