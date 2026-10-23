@@ -38,9 +38,6 @@ elif $VERBOSE; then
   echo "[ COMMAND CHECK ] jq is installed."
 fi
 
-# accepts a <to_merge> and <to_merge_to> as arguments
-# if <to_merge_to> does not exists, create a json file with an empty object
-# if exists, put all the keys from <to_merge> into <to_merge_to>
 merge_to_file() {
     mkdir -p "$(dirname "$2")"
     if [ ! -f "$2" ]; then
@@ -77,6 +74,7 @@ if $VERBOSE; then
 fi
 mkdir -p "$FINAL_DIR/42"
 cp mod.info "$FINAL_DIR/42"
+cp preview.png "$FINAL_DIR/42/poster.png"
 
 if $VERBOSE; then
   echo "Creating archive..."
