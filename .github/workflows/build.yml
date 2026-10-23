@@ -2,6 +2,8 @@ name: Build Mod
 
 on:
   push:
+    branches:
+      - "*"
     tags:
       - "*"
 
