@@ -1,0 +1,32 @@
+[changelog]
+# Release heading; git-cliff fills in the tag version and date.
+body = """
+{% if version %}\
+## [{{ version | trim_start_matches(pat="v") }}] - {{ timestamp | date(format="%Y-%m-%d") }}
+{% else %}\
+## [unreleased]
+{% endif %}\
+{% for entry in commits | commit_groups(groups=commit_parsers_groups) %}
+### {{ entry.group | striptags | trim | upper_first }}
+{% for commit in entry.commits %}
+- {% if commit.scope %}*({{ commit.scope }})* {% endif %}{% if commit.breaking %}[**breaking**] {% endif %}{{ commit.message | upper_first }}
+{% endfor %}
+{% endfor %}
+"""
+trim = true
+
+[git]
+# Parse Conventional Commit messages and include only commits with a group below.
+conventional_commits = true
+filter_commits = true
+
+# These are the only headings shown in release notes.
+commit_parsers = [
+    { message = "^feat", group = "<!-- 0 -->🚀 Features" },
+    { message = "^fix", group = "<!-- 1 -->🐛 Fixes" },
+    # Ignore all other commit types without grouping warnings.
+    { message = ".*", skip = true },
+]
+
+# Keep unmatched or non-conventional commits out of the notes.
+filter_unconventional = true
