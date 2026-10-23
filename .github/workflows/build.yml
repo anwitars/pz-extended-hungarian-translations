@@ -8,12 +8,15 @@ on:
       - "*"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
     name: Build Project Zomboid Mod
     runs-on: ubuntu-latest
+
+    outputs:
+      version: ${{ steps.version.outputs.version }}
 
     steps:
       - name: Checkout repository
@@ -34,17 +37,18 @@ jobs:
           echo "Building version: $VERSION"
 
       - name: Update mod.info version
-        id: mod_info_version
         env:
           MOD_INFO_VERSION: ${{ steps.version.outputs.version }}
         run: |
           MOD_INFO_VERSION="${MOD_INFO_VERSION%%.dev*}"
           echo "Updating mod.info version: $MOD_INFO_VERSION"
-          sed -i "s/modversion=.*/modversion=$MOD_INFO_VERSION/" mod.info
+          sed -i "s/^modversion=.*/modversion=$MOD_INFO_VERSION/" mod.info
 
       - name: Build mod
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
         run: |
-          ./build.sh "extended-hungarian-translations-${{ steps.version.outputs.version }}.tar.gz"
+          ./build.sh "extended-hungarian-translations-${VERSION}.tar.gz"
 
       - name: Upload mod artifact
         uses: actions/upload-artifact@v4
@@ -53,6 +57,25 @@ jobs:
           path: extended-hungarian-translations-${{ steps.version.outputs.version }}.tar.gz
           if-no-files-found: error
           retention-days: 14
+
+  release:
+    name: Create GitHub release
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Download mod artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: extended-hungarian-translations-${{ needs.build.outputs.version }}
 
       - name: Install git-cliff
         uses: taiki-e/install-action@v2
@@ -63,10 +86,9 @@ jobs:
         run: git-cliff --current --tag "${GITHUB_REF_NAME}" --output release-notes.md
 
       - name: Create GitHub release
-        if: startsWith(github.ref, 'refs/tags/')
         env:
           GH_TOKEN: ${{ github.token }}
-          ARCHIVE: extended-hungarian-translations-${{ steps.version.outputs.version }}.tar.gz
+          ARCHIVE: extended-hungarian-translations-${{ needs.build.outputs.version }}.tar.gz
         run: |
           gh release create "${GITHUB_REF_NAME}" "$ARCHIVE" \
             --title "${GITHUB_REF_NAME}" \
