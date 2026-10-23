@@ -75,6 +75,7 @@ fi
 mkdir -p "$FINAL_DIR/42"
 cp mod.info "$FINAL_DIR/42"
 cp preview.png "$FINAL_DIR/42/poster.png"
+cp preview-small.png "$FINAL_DIR/42/icon.png"
 
 if $VERBOSE; then
   echo "Creating archive..."
