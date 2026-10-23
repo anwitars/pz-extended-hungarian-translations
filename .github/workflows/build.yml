@@ -32,7 +32,7 @@ jobs:
       - name: Get version
         id: version
         run: |
-          VERSION=$(./version.sh)
+          VERSION=$(./tools/version.sh)
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "Building version: $VERSION"
 
@@ -48,7 +48,7 @@ jobs:
         env:
           VERSION: ${{ steps.version.outputs.version }}
         run: |
-          ./build.sh "extended-hungarian-translations-${VERSION}.tar.gz"
+          ./tools/build-mod.sh "extended-hungarian-translations-${VERSION}.tar.gz"
 
       - name: Upload mod artifact
         uses: actions/upload-artifact@v4
