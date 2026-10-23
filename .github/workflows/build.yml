@@ -31,6 +31,15 @@ jobs:
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "Building version: $VERSION"
 
+      - name: Update mod.info version
+        id: mod_info_version
+        env:
+          MOD_INFO_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          MOD_INFO_VERSION="${MOD_INFO_VERSION%%.dev*}"
+          echo "Updating mod.info version: $MOD_INFO_VERSION"
+          sed -i "s/modversion=.*/modversion=$MOD_INFO_VERSION/" mod.info
+
       - name: Build mod
         run: |
           ./build.sh "extended-hungarian-translations-${{ steps.version.outputs.version }}.tar.gz"
