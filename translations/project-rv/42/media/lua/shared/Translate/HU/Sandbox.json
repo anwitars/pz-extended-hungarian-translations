@@ -1,0 +1,17 @@
+{
+  "Sandbox_RVAddon": "Project RV - Járművek",
+  "Sandbox_RVAddon_Custom3x2Caravan": "További 3x2-es lakókocsik",
+  "Sandbox_RVAddon_Custom3x2Caravan_tooltip": "3×2-es lakókocsik és utánfutók szkriptneveinek vesszővel elválasztott listája.",
+  "Sandbox_RVAddon_Custom3x6Caravan": "További 3×6-os lakókocsik",
+  "Sandbox_RVAddon_Custom3x6Caravan_tooltip": "3×6-os lakókocsik és utánfutók szkriptneveinek vesszővel elválasztott listája.",
+  "Sandbox_RVAddon_Custom3x7Empty": "További 3×7-es üres utánfutók",
+  "Sandbox_RVAddon_Custom3x7Empty_tooltip": "3×7-es üres utánfutók szkriptneveinek vesszővel elválasztott listája.",
+  "Sandbox_RVAddon_Custom4x12colossal": "További 4×12-es óriásjárművek",
+  "Sandbox_RVAddon_Custom4x12colossal_tooltip": "4×12-es óriásjárművek szkriptneveinek vesszővel elválasztott listája.",
+  "Sandbox_RVAddon_CustomBusVehicles": "További buszok",
+  "Sandbox_RVAddon_CustomBusVehicles_tooltip": "Buszok járműszkriptneveinek vesszővel elválasztott listája.",
+  "Sandbox_RVAddon_CustomNormalVehicles": "További hagyományos járművek",
+  "Sandbox_RVAddon_CustomNormalVehicles_tooltip": "Járműszkriptnevek vesszővel elválasztott listája (pl. Base.Van,Base.StepVan,Base.VanSpiffo).",
+  "Sandbox_RVAddon_CustomSmallVehicles": "További kis méretű járművek",
+  "Sandbox_RVAddon_CustomSmallVehicles_tooltip": "Kis méretű járművek szkriptneveinek vesszővel elválasztott listája."
+}

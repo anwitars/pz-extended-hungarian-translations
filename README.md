@@ -9,6 +9,7 @@ A projekt célja, hogy a **Project Zomboidhoz** készült népszerű modokhoz ma
 | Mod neve | Állapot |
 |---|---|
 | [Skill Recovery Journal](https://steamcommunity.com/sharedfiles/filedetails/?id=2503622437) | Kész |
+| [Project RV Interior](https://steamcommunity.com/sharedfiles/filedetails/?id=3543229299) | Kész |
 
 Az állapotok jelentése:
 
