@@ -1,0 +1,16 @@
+{
+  "IGUI_CheatPanel_AlwaysDay": "Mindig nappal",
+  "IGUI_CheatPanel_AlwaysDay_tooltip": "Kizárólag nappal van. Más játékosokra nem vonatkozik.",
+  "IGUI_CheatPanel_CanHearAll": "Mindenkit hall",
+  "IGUI_CheatPanel_CanHearAll_tooltip": "Hallj mindenkit voice chat-ben.",
+  "IGUI_CheatPanel_CanSeeAll": "Minden játékost lát",
+  "IGUI_CheatPanel_CanSeeAll_tooltip": "Láss minden játékost a térképen és a világban.",
+  "IGUI_CheatPanel_FishingCheat": "Horgászási csaló mód",
+  "IGUI_CheatPanel_FishingCheat_tooltip": "Bekapcsolja a csaló módot a horgászathoz.",
+  "IGUI_CheatPanel_ZombiesDontAttack": "Zombik nem támadnak",
+  "IGUI_CheatPanel_ZombiesDontAttack_tooltip": "A zombik nem támadják meg a játékost.",
+  "IGUI_DebugContext_SpawnSurvivorHorde": "Túlélőhorda teremtése a területen",
+  "IGUI_DebugContext_SpawnVehicle": "Jármű spawnolása",
+  "IGUI_SpawnHorde_Ragdolling": "Ragdollozás",
+  "IGUI_SpawnHorde_RemoveAllZombies": "Összes zombi eltávolítása"
+}
