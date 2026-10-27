@@ -1,0 +1,9 @@
+{
+  "AddACigarette": "Cigaretta dobozba tétele",
+  "PackCigaretteCarton": "10 doboz cigaretta kartonba helyezése",
+  "PackCigarettes": "20 cigaretta dobozba helyezése",
+  "RollACigarette": "Cigaretta tekerése",
+  "TakeACigarette": "Cigaretta kivétele",
+  "UnpackCigaretteCarton": "10 cigaretta doboz kivétele a kartonból",
+  "UnpackCigarettes": "Cigaretták kivétele"
+}
