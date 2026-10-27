@@ -1,0 +1,13 @@
+{
+  "ContextMenu_CarLighter": "Kocsigyújtó",
+  "ContextMenu_CarNoBattery": "<br> Akkumulátor kivéve vagy hiányzik",
+  "ContextMenu_CarNoKeyOrWire": "<br> Kulcs vagy vezeték hiányzik",
+  "ContextMenu_CarOutOfCigarette": " <br> Nincs mire rágyújtani",
+  "ContextMenu_Smoke": "Rágyújt",
+  "ContextMenu_LightCigaretteWithOven": "Cigaretta meggyújtása a gáztűzhelyen",
+  "ContextMenu_LightCigaretteWithFireplace": "Cigaretta meggyújtása a tűzhelyen",
+  "ContextMenu_LightCigaretteWithBarbecue": "Cigaretta meggyújtása a grillen",
+  "ContextMenu_LightCigaretteWithCampFire": "Cigaretta meggyújtása a tűzhelyen",
+  "ContextMenu_LightCigaretteWithFire": "Cigaretta meggyújtása a tűzzel",
+  "ContextMenu_StartCarSmoking": "Cigarettagyújtó használata "
+}
