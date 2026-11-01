@@ -10,6 +10,7 @@ A projekt célja, hogy a **Project Zomboidhoz** készült népszerű modokhoz ma
 |---|---|
 | [Skill Recovery Journal](https://steamcommunity.com/sharedfiles/filedetails/?id=2503622437) | Kész |
 | [Project RV Interior](https://steamcommunity.com/sharedfiles/filedetails/?id=3543229299) | Kész |
+| [I Don't Need A Lighter](https://steamcommunity.com/sharedfiles/filedetails/?id=2714198296) | Kész |
 
 Az állapotok jelentése:
 
